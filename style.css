@@ -1,0 +1,29 @@
+html {
+    background-color: #003b3b;
+}
+
+body {
+    background-color: #82FAFD;
+    color: #000;
+    font-family: "Courier New", monospace;
+    margin: 20px 50px 50px 50px; 
+    border: 3px solid #fff200;
+    padding: 20px;
+    line-height: 1.6;
+}
+
+
+h1, h2, h3, p, ul, li {
+    color: #000;
+    margin: 10px 0;
+}
+
+a {
+    color: #0000ee;
+    text-decoration: underline;
+}
+
+.section-divider {
+    margin: 16px 0;
+    border-top: 3px solid #dadd19b8;
+}
