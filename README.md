@@ -7,7 +7,7 @@ without asking for permission or paying anything.
 For legal certainty, this work is under the CC0 1.0 Universal License:
 https://creativecommons.org/publicdomain/zero/1.0/
 
-Author: Harry
+Author: Harry <br>
 ───────────────────────────────
 
 
