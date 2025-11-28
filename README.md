@@ -1,4 +1,4 @@
-───────────────────────────────
+─────────────────────────────── <br>
 This work is released into the public domain.
 
 You can use, copy, modify, or distribute it freely, 
