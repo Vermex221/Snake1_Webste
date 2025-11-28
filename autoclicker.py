@@ -3,7 +3,10 @@ import pyautogui
 import threading
 import time
 
-# Function to start the autoclicking
+# -doesnt work more than 10 cps (from testing)- #
+
+running = False
+
 def start_autoclicker(interval):
     global running
     running = True
@@ -11,17 +14,14 @@ def start_autoclicker(interval):
         pyautogui.click()
         time.sleep(interval)
 
-# Function to stop the autoclicker
 def stop_autoclicker():
     global running
     running = False
 
-# Function to handle the start button press
 def start_button_pressed():
     try:
         interval = float(entry_interval.get())
         if interval > 0:
-            # Start a new thread for autoclicking to avoid blocking the GUI
             threading.Thread(target=start_autoclicker, args=(interval,), daemon=True).start()
             status_label.config(text="Autoclicker is running...", fg="green")
             start_button.config(state=tk.DISABLED)
@@ -31,18 +31,21 @@ def start_button_pressed():
     except ValueError:
         status_label.config(text="Please enter a valid number.", fg="red")
 
-# Function to handle the stop button press
 def stop_button_pressed():
     stop_autoclicker()
     status_label.config(text="Autoclicker stopped.", fg="red")
     start_button.config(state=tk.NORMAL)
     stop_button.config(state=tk.DISABLED)
 
-# Setup the GUI
+def toggle_autoclicker(event=None):
+    if running:
+        stop_button_pressed()
+    else:
+        start_button_pressed()
+
 root = tk.Tk()
 root.title("Autoclicker")
 
-# Create UI elements
 label_interval = tk.Label(root, text="Click Interval (seconds):")
 label_interval.pack(pady=10)
 
@@ -58,5 +61,7 @@ stop_button.pack(pady=10)
 status_label = tk.Label(root, text="Enter a valid interval and press Start", fg="blue")
 status_label.pack(pady=10)
 
-# Start the Tkinter event loop
+root.focus_set()
+root.bind_all('<F6>', toggle_autoclicker)
+
 root.mainloop()
