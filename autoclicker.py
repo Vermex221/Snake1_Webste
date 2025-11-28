@@ -1,3 +1,12 @@
+
+# ───────────────────────────────
+# This work is released into the public domain.
+# You can use, copy, modify, or distribute it freely.
+# CC0 1.0 Universal License: https://creativecommons.org/publicdomain/zero/1.0/
+# Author: Harry
+# ───────────────────────────────
+
+
 import tkinter as tk
 import pyautogui
 import threading

@@ -10,12 +10,14 @@ body {
     border: 3px solid #fff200;
     padding: 20px;
     line-height: 1.6;
+    text-align: center;
 }
-
 
 h1, h2, h3, p, ul, li {
     color: #000;
     margin: 10px 0;
+    text-align: center;
+    list-style-position: inside;
 }
 
 a {
@@ -25,5 +27,5 @@ a {
 
 .section-divider {
     margin: 16px 0;
-    border-top: 3px solid #dadd19b8;
+    border-top: 3px solid rgba(218, 221, 25, 0.72);
 }
